@@ -16,7 +16,7 @@
     @apply flex items-center justify-between;
   }
   .section {
-    @apply w-full min-h-[300px] flex flex-col items-center justify-center;
+    @apply w-full min-h-[80vh] capitalize flex flex-col items-center justify-center;
   }
   .container {
     @apply w-full max-w-[1420px] px-4;

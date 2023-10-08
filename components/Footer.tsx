@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="w-full min-h-[300px] flex-center bg-midnight">
+    <div className="w-full min-h-[300px] flex-col flex-center bg-midnight">
+      <h1 className="text-center text-3xl text-white">Footer</h1>
       <div className="container flex-between text-white">
         <div>1</div>
         <div>2</div>
