@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { down } from "@/assets/icons";
 import Image from "next/image";
-import { Button } from ".";
+import { Button, Logo } from ".";
 
 const navLinks = [
   {
@@ -15,14 +15,19 @@ const navLinks = [
     href: "/about",
   },
 
+  // {
+  //   title: "security traning course",
+  //   href: "/securityTraning",
+  //   icon: down,
+  // },
+  // {
+  //   title: "first aid course",
+  //   href: "/firstAid",
+  //   icon: down,
+  // },
   {
-    title: "security traning course",
-    href: "/securityTraning",
-    icon: down,
-  },
-  {
-    title: "first aid course",
-    href: "/firstAid",
+    title: "courses",
+    href: "/courses",
     icon: down,
   },
   {
@@ -39,9 +44,9 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <div className="w-full h-20 bg-midnight flex items-center justify-center">
-      <div className="container flex-between text-white">
-        <div>Logo</div>
+    <div className="w-full h-24 border-b-2 bg-white flex items-center justify-center">
+      <div className="container flex-between text-midnight">
+        <Logo />
         <nav>
           <ul className="flex gap-6">
             {navLinks.map((item) => {
@@ -50,8 +55,8 @@ export default function Navbar() {
                 <li key={item.title} className="flex items-center gap-2">
                   <Link
                     href={item.href}
-                    className={`text-lg capitalize ${
-                      isActive ? "text-warning" : "text-white"
+                    className={`text-xl capitalize font-bold ${
+                      isActive ? "text-warning" : "text-midnight"
                     }`}
                   >
                     {item.title}

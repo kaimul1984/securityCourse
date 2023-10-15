@@ -32,6 +32,7 @@ const config: Config = {
       danger: "#dc3545",
       light: "#f8f9fa",
       dark: "#212529",
+      black: "#000",
       ring: "#243c5a",
     },
   },

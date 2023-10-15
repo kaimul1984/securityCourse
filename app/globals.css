@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.nextSlide {
+  transform: translateX(100%);
+}
+.lastSlide {
+  transform: translateX(-100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 bg-white text-dark font-semibold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring;
+    @apply py-2 px-4 bg-midnight text-white font-semibold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring;
   }
 }
 
