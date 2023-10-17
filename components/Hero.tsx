@@ -75,7 +75,7 @@ export default function Hero() {
             >
               <Image
                 src={item.img}
-                alt={item.title}
+                alt="slideImg"
                 className="absolute w-full h-full "
               />
               <span className="before:absolute before:w-full before:h-full before:left-0 before:top-0  before:bg-dark before:opacity-50"></span>
