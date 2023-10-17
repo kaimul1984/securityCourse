@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Logo from "./Logo";
 import Hero from "./Hero";
 import Attributes from "./Attributes";
+import CopyRight from "./CopyRight";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Logo,
   Hero,
   Attributes,
+  CopyRight,
 };

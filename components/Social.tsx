@@ -3,7 +3,7 @@ import { facebook, instagram, linkedin, twitter } from "@/assets/icons";
 
 const Social = () => {
   return (
-    <div className="flex-center gap-4">
+    <div className="flex items-center gap-4">
       {[facebook, instagram, twitter, linkedin].map((image, index) => (
         <Image
           key={index}

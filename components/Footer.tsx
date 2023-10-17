@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "@/assets/images/logo.jpg";
-import { Logo } from ".";
+import { Logo, Social } from ".";
 import Link from "next/link";
 
 export default function Footer() {
@@ -23,7 +23,9 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex-1 ">
-          <h3 className="font-bold text-xl mb-10">Quick Links</h3>
+          <h3 className="font-bold text-xl mb-10 border-b-[1px]">
+            Quick Links
+          </h3>
           <ul className="flex flex-col gap-2">
             <Link href="">Home</Link>
             <Link href="">About Us</Link>
@@ -33,7 +35,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-xl mb-10">Courses</h3>
+          <h3 className="font-bold text-xl mb-10 border-b-[1px] ">Courses</h3>
           <ul className="flex flex-col gap-2">
             <Link href="">Security training course</Link>
             <Link href="">First Aid course</Link>
@@ -41,10 +43,17 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-xl mb-10">Information</h3>
-          <form action="">
-            <input type="email" />
-          </form>
+          <h3 className="font-bold text-xl mb-10 border-b-[1px]">
+            Information
+          </h3>
+          <p className="mb-4">
+            Email us: <br />
+            example@hotmail.com
+          </p>
+          <p className="mb-4">
+            Follow Us: <br />
+          </p>
+          <Social />
         </div>
       </div>
     </div>

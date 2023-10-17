@@ -1,4 +1,10 @@
-import { Topbar, TailwindIndicator, Navbar, Footer } from "@/components";
+import {
+  Topbar,
+  TailwindIndicator,
+  Navbar,
+  Footer,
+  CopyRight,
+} from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
@@ -21,9 +27,9 @@ export default function RootLayout({
         <Topbar />
         <Navbar />
         <TailwindIndicator />
-
         <main>{children}</main>
         <Footer />
+        <CopyRight />
       </body>
     </html>
   );
