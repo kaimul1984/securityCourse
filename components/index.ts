@@ -8,6 +8,11 @@ import Logo from "./Logo";
 import Hero from "./Hero";
 import Attributes from "./Attributes";
 import CopyRight from "./CopyRight";
+import ParentDiv from "./ParentDiv";
+import Container from "./Container";
+import Course from "./Course";
+import Heading from "./Heading";
+import License from "./License";
 
 export {
   Navbar,
@@ -20,4 +25,9 @@ export {
   Hero,
   Attributes,
   CopyRight,
+  ParentDiv,
+  Container,
+  Course,
+  Heading,
+  License,
 };

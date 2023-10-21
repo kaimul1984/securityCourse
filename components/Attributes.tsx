@@ -11,7 +11,7 @@ const attributes = [
   },
   {
     id: 2,
-    title: "compititive price",
+    title: "competitive price",
     icon: <FaHandHoldingDollar />,
   },
   {

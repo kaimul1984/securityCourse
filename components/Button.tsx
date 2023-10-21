@@ -1,9 +1,15 @@
+import Link from "next/link";
 import React from "react";
 
 type ButtonProps = {
   title: string;
+  path: string;
 };
 
-export default function Button({ title }: ButtonProps) {
-  return <button className="btn-primary">{title}</button>;
+export default function Button({ title, path }: ButtonProps) {
+  return (
+    <Link href={`${path}`} className="btn-primary">
+      {title}
+    </Link>
+  );
 }

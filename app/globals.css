@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  text-transform: capitalize;
+}
 .activeSlide {
   opacity: 1;
   transform: translateX(0);
@@ -19,7 +22,7 @@
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 bg-midnight text-white font-semibold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring;
+    @apply py-2 px-4 bg-midnight text-white text-2xl font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-amber hover:text-midnight focus:outline-none focus:ring;
   }
 }
 

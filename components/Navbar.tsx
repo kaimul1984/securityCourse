@@ -15,20 +15,20 @@ const navLinks = [
     href: "/about",
   },
 
-  // {
-  //   title: "security traning course",
-  //   href: "/securityTraning",
-  //   icon: down,
-  // },
-  // {
-  //   title: "first aid course",
-  //   href: "/firstAid",
-  //   icon: down,
-  // },
   {
     title: "courses",
     href: "/courses",
     icon: down,
+    children: [
+      {
+        title: "security training course",
+        href: "/securityTraining",
+      },
+      {
+        title: "first aid course",
+        href: "/firstAid",
+      },
+    ],
   },
   {
     title: "upcoming courses",
@@ -48,7 +48,7 @@ export default function Navbar() {
       <div className="container flex-between text-midnight">
         <Logo />
         <nav>
-          <ul className="flex gap-6">
+          <ul className=" group flex gap-6 relative h-24">
             {navLinks.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -63,6 +63,20 @@ export default function Navbar() {
                   </Link>
                   {item.icon && (
                     <Image src={item.icon} alt="icon" width={20} height={20} />
+                  )}
+                  {item.children && (
+                    <ul className="absolute top-24 p-4 scale-0  transition-all duration-300 z-50  bg-white shadow-2xl group-hover:scale-100">
+                      <li className="flex flex-col gap-4">
+                        {item.children.map((child) => (
+                          <Link
+                            href={`${child.href}`}
+                            className="text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber"
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </li>
+                    </ul>
                   )}
                 </li>
               );

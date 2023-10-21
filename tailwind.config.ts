@@ -34,6 +34,7 @@ const config: Config = {
       dark: "#212529",
       black: "#000",
       ring: "#243c5a",
+      amber: "#ffbf00",
     },
   },
   plugins: [],

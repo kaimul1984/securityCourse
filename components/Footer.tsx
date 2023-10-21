@@ -2,6 +2,8 @@ import Image from "next/image";
 import logo from "@/assets/images/logo.jpg";
 import { Logo, Social } from ".";
 import Link from "next/link";
+import { FaMobileAlt } from "react-icons/fa";
+import { email, mobile, phone } from "@/assets/icons";
 
 export default function Footer() {
   return (
@@ -17,9 +19,15 @@ export default function Footer() {
             Sydney, NSW 2000
           </p>
           <span>
-            <Link href="#">+612345678 </Link>
+            <div className="flex items-center gap-2 text-white">
+              <Image src={phone} alt="menuBar" width={30} height={30} />
+              <Link href="tel"> (02) 547621</Link>
+            </div>
             <br />
-            <Link href="#">(02) 876543</Link>
+            <div className="flex items-center gap-2 text-white">
+              <Image src={mobile} alt="menuBar" width={30} height={30} />
+              <Link href="tel">+614598347</Link>
+            </div>
           </span>
         </div>
         <div className="flex-1 ">
@@ -48,7 +56,10 @@ export default function Footer() {
           </h3>
           <p className="mb-4">
             Email us: <br />
-            example@hotmail.com
+            <span className="flex items-center gap-2 text-white mt-4">
+              <Image src={email} alt="menuBar" width={30} height={30} />
+              <Link href="email"> example@gmail.com</Link>
+            </span>
           </p>
           <p className="mb-4">
             Follow Us: <br />

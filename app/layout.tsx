@@ -4,6 +4,7 @@ import {
   Navbar,
   Footer,
   CopyRight,
+  License,
 } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         <TailwindIndicator />
         <main>{children}</main>
+        <License />
         <Footer />
         <CopyRight />
       </body>
