@@ -69,8 +69,9 @@ export default function Navbar() {
                       <li className="flex flex-col gap-4">
                         {item.children.map((child) => (
                           <Link
+                            key={child.title}
                             href={`${child.href}`}
-                            className="text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber"
+                            className="text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber "
                           >
                             {child.title}
                           </Link>
