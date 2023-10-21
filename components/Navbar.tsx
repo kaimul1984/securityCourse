@@ -84,7 +84,7 @@ export default function Navbar() {
             })}
           </ul>
         </nav>
-        <Button title="Login" />
+        <Button path="/" title="Login" />
       </div>
     </div>
   );
