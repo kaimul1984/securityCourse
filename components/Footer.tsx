@@ -8,7 +8,7 @@ import { email, mobile, phone } from "@/assets/icons";
 export default function Footer() {
   return (
     <div className="w-full min-h-[300px] flex-center bg-midnight">
-      <div className="container flex  text-white">
+      <div className="container flex flex-wrap text-white">
         <div className="flex-1 flex flex-col gap-4">
           <div className="flex items-center gap-4">
             <Image src={logo} alt="logo" width={80} height={80} />
@@ -34,7 +34,7 @@ export default function Footer() {
           <h3 className="font-bold text-xl mb-10 border-b-[1px]">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 w-full">
             <Link href="">Home</Link>
             <Link href="">About Us</Link>
             <Link href="">Upcoming Courses</Link>
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         <div className="flex-1">
           <h3 className="font-bold text-xl mb-10 border-b-[1px] ">Courses</h3>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 w-full">
             <Link href="">Security training course</Link>
             <Link href="">First Aid course</Link>
             <Link href="">CPR course</Link>

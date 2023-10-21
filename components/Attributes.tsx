@@ -29,7 +29,7 @@ const attributes = [
 export default function Attributes() {
   return (
     <div className="w-full min-h-[200px] flex-center mb-[100px]">
-      <div className="container flex-center 2xl:gap-6 md:gap-10 flex-wrap py-10">
+      <div className="container flex-center gap-6 2xl:gap-6 md:gap-10 flex-wrap py-10">
         {attributes.map((item) => (
           <div
             key={item.id}

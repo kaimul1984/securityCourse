@@ -9,11 +9,7 @@ import Link from "next/link";
 
 const items = [
   {
-    titles: [
-      "CPP20218 CERTIFICATE II",
-      "IN SECURITY OPERATIONS",
-      "(NSW CLASS 1 ACE)",
-    ],
+    titles: ["CPP20218 CERTIFICATE II", "IN SECURITY OPERATIONS"],
     img: security,
   },
   {
@@ -55,7 +51,7 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <div className="w-full h-[550px] flex-center mb-20">
+    <div className="w-full aspect-square lg:h-[550px] flex-center mb-20">
       <div className="w-full h-full flex overflow-hidden relative">
         {people.map((item, personIndex) => {
           let position = "nextSlide";
@@ -83,7 +79,7 @@ export default function Hero() {
                 {item.titles.map((title) => (
                   <h1
                     key={title}
-                    className=" uppercase z-50 text-center text-white text-5xl font-extrabold leading-normal "
+                    className=" uppercase z-50 text-center text-white text-3xl lg:text-5xl font-extrabold mb-5 "
                   >
                     {title}
                   </h1>
@@ -101,13 +97,13 @@ export default function Hero() {
 
         <div className="absolute top-[50%] w-full h-full">
           <button
-            className="absolute left-0 w-14 h-14 rounded-lg ml-5 flex-center z-10 bg-dark opacity-70 cursor-pointer "
+            className="absolute left-0 w-14 h-14 rounded-lg ml-2 lg:ml-5 flex-center z-10 bg-dark opacity-70 cursor-pointer "
             onClick={() => setIndex(index - 1)}
           >
             <BsChevronLeft className="text-4xl text-white" />
           </button>
           <button
-            className="right-0 absolute w-14 h-14 rounded-lg mr-5 flex-center z-10 bg-dark opacity-70 cursor-pointer"
+            className="right-0 absolute w-14 h-14 rounded-lg mr-2 lg:mr-5 flex-center z-10 bg-dark opacity-70 cursor-pointer"
             onClick={() => setIndex(index + 1)}
           >
             <BsChevronRight className="text-4xl text-white" />

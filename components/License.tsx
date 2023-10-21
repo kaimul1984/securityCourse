@@ -6,7 +6,7 @@ import { PiLockKey } from "react-icons/pi";
 export default function License() {
   return (
     <div className="w-full h-[50px] bg-ring text-white">
-      <Container style="flex flex-wrap items-center justify-center gap-[300px] m-auto h-full">
+      <Container style="flex items-center justify-center gap-4 lg:gap-[300px] m-auto h-full">
         <h2 className="font-extrabold flex items-center gap-4">
           <span className="text-2xl">
             <AiOutlineNumber />

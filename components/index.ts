@@ -13,6 +13,7 @@ import Container from "./Container";
 import Course from "./Course";
 import Heading from "./Heading";
 import License from "./License";
+import Banner from "./Banner";
 
 export {
   Navbar,
@@ -30,4 +31,5 @@ export {
   Course,
   Heading,
   License,
+  Banner,
 };

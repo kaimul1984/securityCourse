@@ -4,6 +4,8 @@ import Link from "next/link";
 import { down } from "@/assets/icons";
 import Image from "next/image";
 import { Button, Logo } from ".";
+import { useState } from "react";
+import { FaBars } from "react-icons/fa6";
 
 const navLinks = [
   {
@@ -34,6 +36,32 @@ const navLinks = [
     title: "upcoming courses",
     href: "/upcoming",
     icon: down,
+    children: [
+      {
+        title: "course-1",
+        href: "/upcoming",
+      },
+      {
+        title: "course-2",
+        href: "/upcoming",
+      },
+      {
+        title: "course-3",
+        href: "/upcoming",
+      },
+      {
+        title: "course-4",
+        href: "/upcoming",
+      },
+      {
+        title: "course-5",
+        href: "/upcoming",
+      },
+      {
+        title: "course-6",
+        href: "/upcoming",
+      },
+    ],
   },
   {
     title: "contact us",
@@ -43,19 +71,35 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="w-full h-24 border-b-2 bg-white flex items-center justify-center">
-      <div className="container flex-between text-midnight">
+      <div className="container relative flex-between text-midnight">
         <Logo />
         <nav>
-          <ul className=" group flex gap-6 relative h-24">
+          <ul
+            className={`${
+              open ? "right-0" : "right-[-500px]"
+            } group flex items-center flex-col w-[60%] h-screen absolute z-50  top-[4.5rem] md:top-[85px]  transition-all duration-300 gap-6 lg:flex-row lg:right-0 lg:top-0 lg:w-full lg:relative lg:h-full`}
+          >
             {navLinks.map((item) => {
               const isActive = pathname === item.href;
               return (
-                <li key={item.title} className="flex items-center gap-2">
+                <li
+                  key={item.title}
+                  className=" relative flex items-center gap-2 py-8"
+                  onMouseEnter={() => setActiveDropdown(item.title)} // Handle mouse enter
+                  onMouseLeave={() => setActiveDropdown(null)} //
+                >
                   <Link
                     href={item.href}
-                    className={`text-xl capitalize font-bold ${
+                    className={`xl:text-xl lg:text-[1em] capitalize font-bold ${
                       isActive ? "text-warning" : "text-midnight"
                     }`}
                   >
@@ -65,13 +109,17 @@ export default function Navbar() {
                     <Image src={item.icon} alt="icon" width={20} height={20} />
                   )}
                   {item.children && (
-                    <ul className="absolute top-24 p-4 scale-0  transition-all duration-300 z-50  bg-white shadow-2xl group-hover:scale-100">
+                    <ul
+                      className={`${
+                        activeDropdown === item.title ? "scale-100" : "scale-0"
+                      } absolute top-[95px] p-4 min-w-[300px] transition-all duration-300 z-50  bg-white shadow-2xl`}
+                    >
                       <li className="flex flex-col gap-4">
                         {item.children.map((child) => (
                           <Link
                             key={child.title}
                             href={`${child.href}`}
-                            className="text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber "
+                            className="xl:text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber w-max "
                           >
                             {child.title}
                           </Link>
@@ -84,7 +132,15 @@ export default function Navbar() {
             })}
           </ul>
         </nav>
-        <Button path="/" title="Login" />
+        <div className="flex items-center gap-6">
+          <Button path="/" title="Login" />
+          <button
+            className="lg:hidden p-2 lg:p-4 rounded-lg bg-[#eee] shadow-2xl fon text-2xl"
+            onClick={toggleMobileMenu}
+          >
+            <FaBars />
+          </button>
+        </div>
       </div>
     </div>
   );
