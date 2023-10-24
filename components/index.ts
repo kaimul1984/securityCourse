@@ -14,6 +14,8 @@ import Course from "./Course";
 import Heading from "./Heading";
 import License from "./License";
 import Banner from "./Banner";
+import WhyUs from "./WhyUs";
+import CallToAction from "./CallToAction";
 
 export {
   Navbar,
@@ -32,4 +34,6 @@ export {
   Heading,
   License,
   Banner,
+  WhyUs,
+  CallToAction,
 };

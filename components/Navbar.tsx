@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { down } from "@/assets/icons";
 import Image from "next/image";
-import { Button, Logo } from ".";
+import { Button, Logo, ParentDiv } from ".";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 
@@ -79,27 +79,28 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full h-24 border-b-2 bg-white flex items-center justify-center">
-      <div className="container relative flex-between text-midnight">
+    <ParentDiv style="h-24 border-b-2 bg-white relative">
+      <div className="container flex-between text-midnight">
         <Logo />
-        <nav>
-          <ul
-            className={`${
-              open ? "right-0" : "right-[-500px]"
-            } group flex items-center flex-col w-[60%] h-screen absolute z-50  top-[4.5rem] md:top-[85px]  transition-all duration-300 gap-6 lg:flex-row lg:right-0 lg:top-0 lg:w-full lg:relative lg:h-full`}
-          >
+        <nav
+          className={`${
+            open ? "h-[calc(100vh-9.5rem)] opacity-100" : "h-0 opacity-0"
+          }  w-screen lg:w-max  bg-secondary lg:bg-white absolute left-0 right-0 z-[99]  top-[6rem] md:top-[85px]  transition-[height] duration-300 lg:top-0  lg:relative lg:h-full lg:opacity-100`}
+        >
+          <ul className="group w-full h-full flex justify-center items-start ml-12 lg:ml-0  flex-col gap-6 lg:flex-row  lg:relative">
             {navLinks.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <li
                   key={item.title}
-                  className=" relative flex items-center gap-2 py-8"
+                  className=" relative flex items-center gap-2 lg:py-8"
                   onMouseEnter={() => setActiveDropdown(item.title)} // Handle mouse enter
                   onMouseLeave={() => setActiveDropdown(null)} //
                 >
                   <Link
                     href={item.href}
-                    className={`xl:text-xl lg:text-[1em] capitalize font-bold ${
+                    onClick={() => setOpen(false)}
+                    className={`text-lg xl:text-xl lg:text-[1em] capitalize font-bold ${
                       isActive ? "text-warning" : "text-midnight"
                     }`}
                   >
@@ -112,13 +113,14 @@ export default function Navbar() {
                     <ul
                       className={`${
                         activeDropdown === item.title ? "scale-100" : "scale-0"
-                      } absolute top-[95px] p-4 min-w-[300px] transition-all duration-300 z-50  bg-white shadow-2xl`}
+                      } absolute top-8 lg:top-[95px] w-max p-4 transition-all duration-300 z-50  bg-white shadow-2xl`}
                     >
                       <li className="flex flex-col gap-4">
                         {item.children.map((child) => (
                           <Link
                             key={child.title}
                             href={`${child.href}`}
+                            onClick={() => setOpen(false)}
                             className="xl:text-2xl font-bold transition-all duration-100 hover:underline hover:text-amber w-max "
                           >
                             {child.title}
@@ -142,6 +144,10 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-    </div>
+    </ParentDiv>
   );
 }
+
+// {`${
+//   open ? "h-[calc(100vh-9.5rem)] opacity-100" : "h-0 opacity-0"
+// } group flex justify-center items-center flex-col w-screen  bg-success absolute left-[-10px] ring-0 z-[99]  top-[4.5rem] md:top-[85px]  transition-[height] duration-300 gap-6 lg:flex-row lg:right-0 lg:top-0 lg:w-full lg:relative lg:h-full lg:opacity-100`}

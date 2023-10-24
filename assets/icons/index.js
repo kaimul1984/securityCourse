@@ -6,5 +6,16 @@ import twitter from "@/assets/icons/twitter.svg";
 import linkedin from "@/assets/icons/linkedin.svg";
 import instagram from "@/assets/icons/instagram.svg";
 import down from "@/assets/icons/down.svg";
+import tick from "@/assets/icons/tick.png";
 
-export { phone, mobile, email, facebook, instagram, twitter, linkedin, down };
+export {
+  phone,
+  mobile,
+  email,
+  facebook,
+  instagram,
+  twitter,
+  linkedin,
+  down,
+  tick,
+};

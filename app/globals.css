@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   text-transform: capitalize;
+  overflow-x: hidden;
 }
+
 .activeSlide {
   opacity: 1;
   transform: translateX(0);
@@ -37,6 +44,15 @@ body {
     @apply w-full min-h-[80vh] capitalize flex flex-col items-center justify-center;
   }
   .container {
-    @apply w-full max-w-[1420px] px-4;
+    @apply w-[95%] max-w-[1420px];
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

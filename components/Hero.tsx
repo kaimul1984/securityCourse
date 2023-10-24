@@ -51,7 +51,7 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <div className="w-full aspect-square lg:h-[550px] flex-center mb-20">
+    <div className="w-full max-w-[1920px] h-[400px] lg:h-[550px] flex-center mb-20">
       <div className="w-full h-full flex overflow-hidden relative">
         {people.map((item, personIndex) => {
           let position = "nextSlide";
@@ -67,7 +67,7 @@ export default function Hero() {
           return (
             <div
               key={index}
-              className={`${position} w-full h-full flex-center bg-tahiti absolute top-0  left-0 translate-x-0 opacity-100 transition-transform duration-300`}
+              className={`${position} w-screen h-full flex-center bg-tahiti absolute top-0  left-0 translate-x-0 opacity-100 transition-transform duration-300`}
             >
               <Image
                 src={item.img}
@@ -79,7 +79,7 @@ export default function Hero() {
                 {item.titles.map((title) => (
                   <h1
                     key={title}
-                    className=" uppercase z-50 text-center text-white text-3xl lg:text-5xl font-extrabold mb-5 "
+                    className=" uppercase z-50 text-center text-white text-2xl lg:text-5xl font-extrabold mb-5 "
                   >
                     {title}
                   </h1>
@@ -95,15 +95,15 @@ export default function Hero() {
           );
         })}
 
-        <div className="absolute top-[50%] w-full h-full">
+        <div className="absolute z-50 top-1/2 translate-y-[-50%] flex w-full ">
           <button
-            className="absolute left-0 w-14 h-14 rounded-lg ml-2 lg:ml-5 flex-center z-10 bg-dark opacity-70 cursor-pointer "
+            className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg ml-2  lg:ml-5 flex-center z-10 bg-dark opacity-70 cursor-pointer "
             onClick={() => setIndex(index - 1)}
           >
             <BsChevronLeft className="text-4xl text-white" />
           </button>
           <button
-            className="right-0 absolute w-14 h-14 rounded-lg mr-2 lg:mr-5 flex-center z-10 bg-dark opacity-70 cursor-pointer"
+            className=" absolute right-0 w-10 h-10 lg:w-14 lg:h-14 rounded-lg mr-2 lg:mr-5 flex-center z-10 bg-dark opacity-70 cursor-pointer"
             onClick={() => setIndex(index + 1)}
           >
             <BsChevronRight className="text-4xl text-white" />

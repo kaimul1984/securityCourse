@@ -8,8 +8,8 @@ import { email, mobile, phone } from "@/assets/icons";
 export default function Footer() {
   return (
     <div className="w-full min-h-[300px] flex-center bg-midnight">
-      <div className="container flex flex-wrap text-white">
-        <div className="flex-1 flex flex-col gap-4">
+      <div className="container py-8 flex flex-wrap gap-6 text-white">
+        <div className="flex-1 min-w-[300px] flex flex-col gap-4">
           <div className="flex items-center gap-4">
             <Image src={logo} alt="logo" width={80} height={80} />
             <span className="text-3xl font-bold">WSVTA</span>
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
           </span>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1 min-w-[300px] ">
           <h3 className="font-bold text-xl mb-10 border-b-[1px]">
             Quick Links
           </h3>
@@ -42,7 +42,7 @@ export default function Footer() {
             <Link href="">Contact us</Link>
           </ul>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-[300px]">
           <h3 className="font-bold text-xl mb-10 border-b-[1px] ">Courses</h3>
           <ul className="flex flex-col gap-2 w-full">
             <Link href="">Security training course</Link>
@@ -50,7 +50,7 @@ export default function Footer() {
             <Link href="">CPR course</Link>
           </ul>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-[300px]">
           <h3 className="font-bold text-xl mb-10 border-b-[1px]">
             Information
           </h3>

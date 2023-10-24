@@ -24,8 +24,8 @@ export default function Course({
   href,
 }: ComponentProps) {
   return (
-    <Container style=" group flex justify-between mb-[100px] odd:flex-row-reverse ">
-      <div className="flex-1 flex items-center justify-center relative rounded-tl-[50px]">
+    <Container style=" group flex flex-col px-4 lg:flex-row justify-between mb-[100px] odd:lg:flex-row-reverse ">
+      <div className="flex-1 flex items-center justify-center relative lg:rounded-tl-[50px]">
         <Image
           src={img1}
           alt="secuirty-1"
@@ -34,7 +34,7 @@ export default function Course({
         <Image
           src={img2}
           alt="secuirty-1"
-          className="w-[200px] height-[200px]  absolute right-0 bottom-0 group-even:rounded-tl-[50px] group-odd:rounded-tr-[50px] group-even:bg-white group-odd:bg-amber group-even:pl-2 group-odd:pr-2 group-odd:left-0 group-odd:bottom-0"
+          className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] aspect-square lg:aspect-auto absolute right-0 bottom-0 group-even:rounded-tl-[50px] group-odd:rounded-tr-[50px] group-even:bg-white group-odd:bg-amber group-even:pl-2 group-odd:pr-2 group-odd:left-0 group-odd:bottom-0"
         />
       </div>
       <div className="flex-1 p-8 bg-silver">
