@@ -16,6 +16,7 @@ import License from "./License";
 import Banner from "./Banner";
 import WhyUs from "./WhyUs";
 import CallToAction from "./CallToAction";
+import ContactUs from "./ContactUs";
 
 export {
   Navbar,
@@ -36,4 +37,5 @@ export {
   Banner,
   WhyUs,
   CallToAction,
+  ContactUs,
 };

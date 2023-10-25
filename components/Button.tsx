@@ -8,7 +8,7 @@ type ButtonProps = {
 
 export default function Button({ title, path }: ButtonProps) {
   return (
-    <Link href={`${path}`} className="btn-primary">
+    <Link href={`${path}`} className="btn-primary w-max">
       {title}
     </Link>
   );

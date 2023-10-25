@@ -38,7 +38,10 @@ export default function Course({
         />
       </div>
       <div className="flex-1 p-8 bg-silver">
-        <h3 className="mb-6">{heading3}</h3>
+        <div className="flex items-center gap-4 mb-6">
+          <span className="w-20 h-[1px] bg-midnight" />
+          <h3 className="text-lg font-bold text-success">{heading3}</h3>
+        </div>
         <h1 className="mb-6 text-[1.7rem] font-extrabold">
           {heading1} <span className="text-amber uppercase">{span}</span>
         </h1>

@@ -32,11 +32,11 @@ export default function WhyUs() {
           </div>
         </div>
         <div className="flex-1 p-8 ">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <span className="w-20 h-[1px] bg-midnight" />
             <h3 className="text-lg font-bold text-warning">why we are</h3>
           </div>
-          <h1 className="mb-10 text-2xl font-extrabold">
+          <h1 className="mb-8 text-3xl font-extrabold">
             our <span className="text-success">professionalism</span> makes us
             stand out in the industry.
           </h1>
@@ -50,7 +50,7 @@ export default function WhyUs() {
             the industry as well as working closely with regulators to ensure
             that our clients are getting .
           </p>
-          <div className=" flex flex-wrap gap-6 mb-8">
+          <div className=" flex flex-wrap gap-4 mb-8">
             <div className="w-[300px] flex items-center gap-4">
               <Image src={tick} alt="tick" width={60} height={60} />
               <h2 className="text-xl font-bold">we deliver</h2>
