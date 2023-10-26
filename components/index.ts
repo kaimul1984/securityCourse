@@ -17,6 +17,7 @@ import Banner from "./Banner";
 import WhyUs from "./WhyUs";
 import CallToAction from "./CallToAction";
 import ContactUs from "./ContactUs";
+import Promt from "./Promt";
 
 export {
   Navbar,
@@ -38,4 +39,5 @@ export {
   WhyUs,
   CallToAction,
   ContactUs,
+  Promt,
 };
