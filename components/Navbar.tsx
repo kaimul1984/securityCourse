@@ -85,9 +85,9 @@ export default function Navbar() {
         <nav
           className={`${
             open ? "h-[calc(100vh-9.5rem)] opacity-100" : "h-0 opacity-0"
-          }  w-screen lg:w-max  bg-secondary lg:bg-white absolute left-0 right-0 z-[99]  top-[6rem] md:top-[85px]  transition-[height] duration-300 lg:top-0  lg:relative lg:h-full lg:opacity-100`}
+          }  w-full lg:w-max  bg-secondary lg:bg-white absolute left-0 right-0 z-[999]  top-[6rem] md:top-[85px]  transition-[height] duration-300 lg:top-0  lg:relative lg:h-full lg:opacity-100`}
         >
-          <ul className="group w-full h-full flex justify-center items-start ml-12 lg:ml-0  flex-col gap-6 lg:flex-row  lg:relative">
+          <ul className="h-full flex justify-center items-start ml-12 lg:ml-0  flex-col gap-6 lg:flex-row  lg:relative">
             {navLinks.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -115,7 +115,7 @@ export default function Navbar() {
                         activeDropdown === item.title ? "scale-100" : "scale-0"
                       } absolute top-8 lg:top-[95px] w-max p-4 transition-all duration-300 z-50  bg-white shadow-2xl`}
                     >
-                      <li className="flex flex-col gap-4">
+                      <li className="flex flex-col gap-4 ">
                         {item.children.map((child) => (
                           <Link
                             key={child.title}
