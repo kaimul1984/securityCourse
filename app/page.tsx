@@ -6,6 +6,7 @@ import {
   Promt,
   WhyUs,
 } from "@/components";
+import Blogs from "@/components/Blogs";
 import OurCourses from "@/components/OurCourses";
 import TailwindIndicator from "@/components/Tailwind-indicator";
 import React from "react";
@@ -20,6 +21,7 @@ export default function Home() {
       <WhyUs />
       <CallToAction />
       <ContactUs />
+      <Blogs />
     </>
   );
 }

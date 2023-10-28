@@ -7,23 +7,23 @@ import { tick } from "@/assets/icons";
 export default function WhyUs() {
   return (
     <ParentDiv style="min-h-[300px] mb-20">
-      <Container style="py-8 flex-between">
+      <Container style="py-8 flex-between flex-wrap gap-8 lg:gap-2">
         <div className="flex-1 flex-center relative ">
-          <div className="w-[200px] h-[200px] rounded-full bg-white p-4 absolute top-5 left-5">
+          <div className="w-[160px] h-[160px] lg:w-[200px] lg:h-[200px] rounded-full bg-white p-4 absolute top-[-50px] left-0 lg:top-5 lg:left-5">
             <Image
               src={img1}
               alt="security"
               className="w-full h-full rounded-full"
             />
           </div>
-          <div className="w-[550px] h-[550px] rounded-full ">
+          <div className="w-[350px] h-[350px] lg:w-[550px] lg:h-[550px] rounded-full ">
             <Image
               src={img5}
               alt="security"
               className="rounded-full w-full h-full"
             />
           </div>
-          <div className="w-40 h-40 rounded-full absolute bottom-0 right-10 bg-white p-4 ">
+          <div className="w-36 h-36 lg:w-40 lg:h-40 rounded-full absolute bottom-[-50px] right-0 lg:bottom-0 lg:right-10 bg-white p-4 ">
             <Image
               src={img4}
               alt="security"
@@ -50,22 +50,38 @@ export default function WhyUs() {
             the industry as well as working closely with regulators to ensure
             that our clients are getting .
           </p>
-          <div className=" flex flex-wrap gap-4 mb-8">
-            <div className="w-[300px] flex items-center gap-4">
-              <Image src={tick} alt="tick" width={60} height={60} />
-              <h2 className="text-xl font-bold">we deliver</h2>
+          <div className=" flex flex-wrap lg:gap-4 mb-8">
+            <div className="w-[160px] lg:w-[300px] flex items-center  gap-2 lg:gap-4">
+              <Image
+                src={tick}
+                alt="tick"
+                className="w-10 h-10 lg:w-16 lg:h-16"
+              />
+              <h2 className=" text-md lg:text-xl font-bold">we deliver</h2>
             </div>
-            <div className="w-[300px] flex items-center gap-4">
-              <Image src={tick} alt="tick" width={60} height={60} />
-              <h2 className="text-xl font-bold">we care</h2>
+            <div className="w-[160px] lg:w-[300px] flex items-center  gap-2 lg:gap-4">
+              <Image
+                src={tick}
+                alt="tick"
+                className="w-10 h-10 lg:w-16 lg:h-16"
+              />
+              <h2 className="text-md lg:text-xl font-bold">we care</h2>
             </div>
-            <div className="w-[300px] flex items-center gap-4">
-              <Image src={tick} alt="tick" width={60} height={60} />
-              <h2 className="text-xl font-bold">our experience</h2>
+            <div className="w-[160px] lg:w-[300px] flex items-center gap-2 lg:gap-4">
+              <Image
+                src={tick}
+                alt="tick"
+                className="w-10 h-10 lg:w-16 lg:h-16"
+              />
+              <h2 className="text-md lg:text-xl font-bold">our experience</h2>
             </div>
-            <div className="w-[300px] flex items-center gap-4">
-              <Image src={tick} alt="tick" width={60} height={60} />
-              <h2 className="text-xl font-bold">our commitment</h2>
+            <div className="w-[160px] lg:w-[300px] flex items-center  gap-2 lg:gap-4">
+              <Image
+                src={tick}
+                alt="tick"
+                className="w-10 h-10 lg:w-16 lg:h-16"
+              />
+              <h2 className="text-md lg:text-xl font-bold">our commitment</h2>
             </div>
           </div>
           <Button title="learn more" path="about" />

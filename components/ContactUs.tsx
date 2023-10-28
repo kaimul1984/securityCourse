@@ -4,7 +4,7 @@ import { Button, Container, ParentDiv } from ".";
 export default function ContactUs() {
   return (
     <ParentDiv style="min-h-[300px] mb-20">
-      <Container style="py-8 flex flex-wrap">
+      <Container style="py-8 flex flex-wrap gap-8 lg:gap-2">
         <div className="flex-1 flex flex-col justify-center gap-2 px-8">
           <div className="flex items-center gap-4 mb-6">
             <span className="w-20 h-[1px] bg-midnight" />
