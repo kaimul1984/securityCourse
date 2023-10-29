@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button, Logo, ParentDiv } from ".";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
+import Login from "./Login";
 
 const navLinks = [
   {
@@ -135,7 +136,7 @@ export default function Navbar() {
           </ul>
         </nav>
         <div className="flex items-center gap-6">
-          <Button path="/" title="Login" />
+          <Login />
           <button
             className="lg:hidden p-2 lg:p-4 rounded-lg bg-[#eee] shadow-2xl fon text-2xl"
             onClick={toggleMobileMenu}
@@ -147,7 +148,3 @@ export default function Navbar() {
     </ParentDiv>
   );
 }
-
-// {`${
-//   open ? "h-[calc(100vh-9.5rem)] opacity-100" : "h-0 opacity-0"
-// } group flex justify-center items-center flex-col w-screen  bg-success absolute left-[-10px] ring-0 z-[99]  top-[4.5rem] md:top-[85px]  transition-[height] duration-300 gap-6 lg:flex-row lg:right-0 lg:top-0 lg:w-full lg:relative lg:h-full lg:opacity-100`}

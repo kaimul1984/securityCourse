@@ -6,6 +6,7 @@ import logo from "@/assets/images/LogoDesktop.jpg";
 import Image from "next/image";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
+import { Button } from ".";
 
 const items = [
   {
@@ -79,17 +80,18 @@ export default function Hero() {
                 {item.titles.map((title) => (
                   <h1
                     key={title}
-                    className=" uppercase z-50 text-center text-white text-2xl lg:text-5xl font-extrabold mb-5 "
+                    className=" uppercase z-50 text-center text-white text-2xl lg:text-5xl font-extrabold mb-8 "
                   >
                     {title}
                   </h1>
                 ))}
-                <Link
+                {/* <Link
                   href="#"
                   className=" bg-white py-4 px-6 z-50 text-blac text-2xl rounded-lg mt-6 "
                 >
                   Enrol Now
-                </Link>
+                </Link> */}
+                <Button title="enrol now" path="#" />
               </div>
             </div>
           );

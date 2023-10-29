@@ -3,6 +3,7 @@ import {
   CallToAction,
   ContactUs,
   Hero,
+  OurClient,
   Promt,
   WhyUs,
 } from "@/components";
@@ -22,6 +23,7 @@ export default function Home() {
       <CallToAction />
       <ContactUs />
       <Blogs />
+      <OurClient />
     </>
   );
 }

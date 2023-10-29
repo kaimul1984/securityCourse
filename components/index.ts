@@ -18,6 +18,7 @@ import WhyUs from "./WhyUs";
 import CallToAction from "./CallToAction";
 import ContactUs from "./ContactUs";
 import Promt from "./Promt";
+import OurClient from "./OurClient";
 
 export {
   Navbar,
@@ -40,4 +41,5 @@ export {
   CallToAction,
   ContactUs,
   Promt,
+  OurClient,
 };

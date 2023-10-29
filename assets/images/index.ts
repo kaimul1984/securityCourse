@@ -8,6 +8,10 @@ import logo2 from "@/assets/images/logo2.png";
 import firstaid from "@/assets/images/blog-firstaid.png";
 import security from "@/assets/images/blog-security.jpeg";
 import security2 from "@/assets/images/blog-security2.jpeg";
+import client1 from "@/assets/images/client1.png";
+import client2 from "@/assets/images/client2.png";
+import client3 from "@/assets/images/client3.png";
+import client4 from "@/assets/images/client4.png";
 
 export {
   img1,
@@ -20,4 +24,8 @@ export {
   firstaid,
   security,
   security2,
+  client1,
+  client2,
+  client3,
+  client4,
 };
