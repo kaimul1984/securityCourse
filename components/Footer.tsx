@@ -15,8 +15,9 @@ export default function Footer() {
             <span className="text-3xl font-bold">WSVTA</span>
           </div>
           <p>
-            <strong>Adrees:</strong> <br /> 264 george street, <br />
-            Sydney, NSW 2000
+            <strong>Addrees: western sydney location</strong> <br /> building
+            P23, Western sydney university <br />
+            Bouke st, Richmond, NSW 2753
           </p>
           <span>
             <div className="flex items-center gap-2 text-white">
@@ -58,7 +59,7 @@ export default function Footer() {
             Email us: <br />
             <span className="flex items-center gap-2 text-white mt-4">
               <Image src={email} alt="menuBar" width={30} height={30} />
-              <Link href="email"> example@gmail.com</Link>
+              <Link href="email">info@wsvta.com</Link>
             </span>
           </p>
           <p className="mb-4">
