@@ -21,7 +21,7 @@ export default function Topbar() {
           </div>
           <div className="flex items-center gap-2 text-white">
             <Image src={email} alt="menuBar" width={30} height={30} />
-            <Link href="email" className="w-max">
+            <Link href="email" className="w-max lowercase">
               info@wsvta.com
             </Link>
           </div>

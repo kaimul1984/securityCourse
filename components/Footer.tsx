@@ -59,7 +59,9 @@ export default function Footer() {
             Email us: <br />
             <span className="flex items-center gap-2 text-white mt-4">
               <Image src={email} alt="menuBar" width={30} height={30} />
-              <Link href="email">info@wsvta.com</Link>
+              <Link href="email" className="lowercase">
+                info@wsvta.com
+              </Link>
             </span>
           </p>
           <p className="mb-4">
