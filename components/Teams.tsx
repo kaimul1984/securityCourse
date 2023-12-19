@@ -36,10 +36,12 @@ const teams = [
 export default function Teams() {
   return (
     <div className="w-full bg-[url('/img-4.jpg')] bg-cover bg-center min-h-[300px] mb-[100px]">
-      <div className="container p-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">
+      <div className="container p-8 mx-auto">
+        <h1 className="text-3xl font-bold mb-2 text-center">
           meet our professionals
         </h1>
+        <div className="w-[100px] h-1 bg-warning mx-auto mb-8" />
+
         <div className="flex flex-wrap items-center justify-between gap-5 ">
           {teams.map((team) => (
             <TeamMember
@@ -56,7 +58,7 @@ export default function Teams() {
 }
 const TeamMember = ({ image, name, position }: any) => {
   return (
-    <div className="w-[400px]">
+    <div className="w-[400px] bg-silver flex flex-col items-center justify-center p-4 rounded-xl">
       <div className="relative transition-transform duration-500 transform hover:-translate-y-5">
         <Image
           src={image}
@@ -72,12 +74,13 @@ const TeamMember = ({ image, name, position }: any) => {
         </div>
       </div>
 
-      <div className="text-center my-4">
-        <h2 className="text-lg font-medium mb-2">{name}</h2>
+      <div className=" flex flex-col items-center justify-center text-center gap-2 my-4">
+        <h2 className="text-lg font-medium">{name}</h2>
         <h4 className="text-success">{position}</h4>
+        <div className="w-[100px] h-1 bg-warning" />
       </div>
       <div>
-        <p>
+        <p className="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
           exercitationem placeat molestias repellat vitae itaque neque quia
           pariatur consectetur minima eius, odio sequi inventore debitis optio

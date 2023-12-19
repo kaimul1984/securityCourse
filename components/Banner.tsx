@@ -13,9 +13,7 @@ export default function Banner({ title, image }: BannerProps) {
       <Image
         src={image}
         alt="firstaid"
-        width={1000}
-        height={1000}
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-[300px] object-cover"
       />
       <h1
         className="text-center text-white text-5xl font-bold z-50

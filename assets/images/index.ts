@@ -1,11 +1,13 @@
 import img1 from "@/assets/images/security1.jpeg";
 import img2 from "@/assets/images/security2.jpeg";
+import img6 from "@/assets/images/security4.jpg";
 import securityB from "@/assets/images/security3.jpeg";
 import img3 from "@/assets/images/aid1.jpeg";
 import img4 from "@/assets/images/aid2.jpeg";
 import img5 from "@/assets/images/classroom.jpeg";
 import logo from "@/assets/images/logo.jpg";
 import aboutus from "@/assets/images/LogoDesktop.jpg";
+import mission from "@/assets/images/mission.jpg";
 import logo2 from "@/assets/images/logo2.png";
 import contact from "@/assets/images/contact.jpeg";
 import firstaid from "@/assets/images/blog-firstaid.png";
@@ -22,6 +24,7 @@ export {
   img3,
   img4,
   img5,
+  img6,
   logo,
   logo2,
   firstaid,
@@ -34,4 +37,5 @@ export {
   contact,
   securityB,
   aboutus,
+  mission,
 };

@@ -50,6 +50,12 @@ body {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  .text-stroke {
+    -webkit-text-stroke: 1px #fff;
+  }
+  .text-wrap {
+    text-wrap: balance;
+  }
 
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
