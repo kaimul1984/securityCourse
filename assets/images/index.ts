@@ -2,6 +2,7 @@ import img1 from "@/assets/images/security1.jpeg";
 import img2 from "@/assets/images/security2.jpeg";
 import img6 from "@/assets/images/security4.jpg";
 import securityB from "@/assets/images/security3.jpeg";
+import securityCourse from "@/assets/images/security-course-image.jpeg";
 import img3 from "@/assets/images/aid1.jpeg";
 import img4 from "@/assets/images/aid2.jpeg";
 import img5 from "@/assets/images/classroom.jpeg";
@@ -30,6 +31,7 @@ export {
   firstaid,
   security,
   security2,
+  securityCourse,
   client1,
   client2,
   client3,
