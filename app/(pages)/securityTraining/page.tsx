@@ -101,7 +101,10 @@ export default function SecurityTraning() {
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-8 py-8">
               {steps.map((step) => (
-                <div className="w-[200px] min-h-[200px] bg-silver flex flex-col items-center justify-center rounded-lg shadow-xl relative">
+                <div
+                  key={step.title}
+                  className="w-[200px] min-h-[200px] bg-silver flex flex-col items-center justify-center rounded-lg shadow-xl relative"
+                >
                   <div
                     className={`w-14 h-14 ${step.bgColor} absolute right-[-10px] top-[-10px] rounded-bl-full`}
                   >
