@@ -1,149 +1,27 @@
 "use client";
-import {
-  book,
-  brochure,
-  faq,
-  step1,
-  step2,
-  step3,
-  step4,
-  step5,
-  step6,
-  step7,
-  step8,
-} from "@/assets/icons";
+import { book, brochure, faq } from "@/assets/icons";
 import { img6, security2, securityCourse } from "@/assets/images";
-import { Banner, CourseHeader, Resources, Steps } from "@/components";
+import { Banner, CourseHeader, CourseTab, Steps } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
-const steps = [
-  {
-    title: "01",
-    icon: step1,
-    info: "Check your Eligibility",
-    bgColor: "bg-warning",
-  },
-  {
-    title: "02",
-    icon: step2,
-    info: "Enrol Online",
-    bgColor: "bg-primary",
-  },
-  {
-    title: "03",
-    icon: step3,
-    info: "Visit us for a Pre-Enrolment Test (90 minutes)",
-    bgColor: "bg-tahiti",
-  },
-  {
-    title: "04",
-    icon: step4,
-    info: "Complete First Aid Course",
-    bgColor: "bg-danger",
-  },
-  {
-    title: "05",
-    icon: step5,
-    info: "Complete Online Self-Studies",
-    bgColor: "bg-success",
-  },
-  {
-    title: "06",
-    icon: step6,
-    info: "Attend 10 days of in-class Training",
-    bgColor: "bg-ring",
-  },
-  {
-    title: "07",
-    icon: step7,
-    info: "Receive your Certificate",
-    bgColor: "bg-purple",
-  },
-  {
-    title: "08",
-    icon: step8,
-    info: "Apply for your Security Licence",
-    bgColor: "bg-metal",
-  },
-];
-
-export default function SecurityTraning() {
+export default function CourseTemplate() {
   return (
     <section className="w-full min-h-[600px]">
       <Banner title="Security Training" image={img6} />
       <div className="container mx-auto min-h-[600px] flex flex-wrap gap-6 my-[100px]">
         {/* left div */}
         <div className="lg:flex-[.70] w-full flex items-center flex-col justify-center">
-          <CourseHeader
-            heading="CPP20218 CERTIFICATE II IN"
-            span="SECURITY OPERATIONS"
-            image={img6}
-          />
-          {/* steps */}
-          <div className="w-full min-h-[300px]  mt-16 bg-white shadow-2xl">
-            <h1 className="bg-midnight text-2xl text-white font-bold text-center py-2">
-              Following steps need to follow to achieve security licence
-            </h1>
-            <div className="flex flex-wrap items-center justify-center gap-8 py-8">
-              {steps.map((step) => (
-                <>
-                  <Steps
-                    title={step.title}
-                    icon={step.icon}
-                    info={step.info}
-                    bgColor={step.bgColor}
-                  />
-                </>
-              ))}
-            </div>
-          </div>
+          <CourseHeader />
+          <Steps />
 
-          {/* steps end */}
           {/* tab start */}
           <div className="w-full my-[100px] bg-silver p-2">
             <div className="mb-4">
               {/* course overview */}
-              <details open className="mb-4">
-                <summary className="group bg-midnight flex items-center justify-between p-2 cursor-pointer">
-                  <h1 className="text-white font-bold text-2xl">
-                    course overview
-                  </h1>
-                  <span>
-                    <FaChevronDown className="fill-white font-bold text-2xl group-hover:rotate-180 group-hover:fill-danger transition-all duration-300" />
-                  </span>
-                </summary>
-                <div className="bg-light text-black">
-                  <p className="leading-7 p-4 text-[1.1rem] transition-all duration-300 text-justify">
-                    Our <strong>NSW Security Licence Training Course</strong>{" "}
-                    covers the requirements of Nationally recognised
-                    qualification{" "}
-                    <strong>
-                      CPP20218 Certificate II in security operations
-                    </strong>{" "}
-                    and the compulsory requirement for obtaining an{" "}
-                    <strong>
-                      NSW Class 1A Security license (previously for NSW Class 1A
-                      & 1C Security Licence)*
-                    </strong>
-                    . Choosing the right training provider ensures that you
-                    learn the necessary skills and knowledge to help you in your
-                    future workplace.
-                  </p>
-                  <p className="leading-7 p-4 text-[1.1rem] transition-all duration-300 text-justify">
-                    <strong>western sydney vocational training college</strong>{" "}
-                    has helped more than 10 thousand students achieve success.
-                    Choosing WSVTA will empower you with the necessary knowledge
-                    and skills to succeed in your career. We have more than
-                    seven years of experience. Our staff are highly professional
-                    and expert in the industry. We work with all our students
-                    and provide the necessary resources and knowledge to apply
-                    for their NSW security licence.
-                  </p>
-                </div>
-              </details>
+              <CourseTab />
               {/* end */}
               {/*  Course Duration and Delivery Method */}
               <details className="mb-4">
@@ -401,7 +279,46 @@ export default function SecurityTraning() {
         </div>
         {/* left div end*/}
         {/* right div */}
-        <Resources />
+        <div className="lg:flex-[.30] w-full max-h-[400px] bg-white shadow-2xl">
+          <h1 className="bg-midnight text-3xl font-bold text-white text-center py-2">
+            Our Resources
+          </h1>
+          <ul className="flex flex-col gap-4 mt-8 ml-4 ">
+            <li className="flex items-center gap-4 ">
+              <span>
+                <Image src={book} alt="" width={50} height={50} />
+              </span>
+              <Link
+                href="/"
+                className="text-xl font-bold hover:text-warning hover:underline transition-all duration-75"
+              >
+                student handbook
+              </Link>
+            </li>
+            <li className="flex items-center gap-4 ">
+              <span>
+                <Image src={brochure} alt="" width={50} height={50} />
+              </span>
+              <Link
+                href="/"
+                className="text-xl font-bold hover:text-warning hover:underline transition-all duration-75"
+              >
+                course information brochure
+              </Link>
+            </li>
+            <li className="flex items-center gap-4">
+              <span>
+                <Image src={faq} alt="" width={50} height={50} />
+              </span>
+              <Link
+                href="/"
+                className="text-xl font-bold  hover:text-warning hover:underline transition-all duration-75"
+              >
+                frequently asked questions
+              </Link>
+            </li>
+          </ul>
+        </div>
         {/* right div end */}
       </div>
     </section>

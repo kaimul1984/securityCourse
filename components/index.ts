@@ -19,6 +19,11 @@ import CallToAction from "./CallToAction";
 import ContactUs from "./ContactUs";
 import Promt from "./Promt";
 import OurClient from "./OurClient";
+import Steps from "./Steps";
+import CourseHeader from "./CourseHeader";
+import CourseTab from "./CourseTab";
+import CourseTemplate from "./CourseTemplate";
+import Resources from "./Resources";
 
 export {
   Navbar,
@@ -42,4 +47,9 @@ export {
   ContactUs,
   Promt,
   OurClient,
+  Steps,
+  CourseTemplate,
+  CourseHeader,
+  CourseTab,
+  Resources,
 };

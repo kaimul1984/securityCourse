@@ -18,6 +18,7 @@ import client1 from "@/assets/images/client1.png";
 import client2 from "@/assets/images/client2.png";
 import client3 from "@/assets/images/client3.png";
 import client4 from "@/assets/images/client4.png";
+import firstAid4 from "@/assets/images/firstaid4.jpg";
 
 export {
   img1,
@@ -40,4 +41,5 @@ export {
   securityB,
   aboutus,
   mission,
+  firstAid4,
 };
